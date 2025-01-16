@@ -1,0 +1,763 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--    Tree  -->
+    <record id="analisis_de_costes_view_tree" model="ir.ui.view">
+        <field name="model">analisis_de_costes</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field optional="show" name="name" string="Nombre"/>
+                <field optional="show" name="fecha" string="Fecha"/>
+                <field optional="show" name="cliente" string="Cliente"/>
+                <field optional="show" name="nombre_producto" string="Nombre Producto"/>
+                <field optional="show" name="aplicacion" string="Aplicacion"/>
+                <field optional="show" name="pais"/>
+                <field optional="show" name="fecha_lanzamiento" string="Fecha lanzamiento"/>
+                <field optional="show" name="producto_existente" string="Producto existente"/>
+                <field optional="show" name="unidades_pedido" string="Unidades pedido"/>
+                <field optional="show" name="unidades_anual" string="Unidades anuales"/>
+                <field optional="show" name="precio_target" string="Precio target"/>
+                <field optional="show" name="velocidad_encapsulado"/>
+                <field optional="show" name="velocidad_envasado"/>
+                <field optional="show" name="merma_estimada"/>
+                <field optional="show" name="tipo_limpieza"/>
+                <field name="comentarios" optional="show"/>
+                <field name="packaging_primario" optional="show"/>
+                <field name="tamanyo_blister" optional="show"/>
+                <field name="blister_unidad" optional="show"/>
+                <field name="serigrafia" optional="show"/>
+                <field name="bobina_aluminio" optional="show"/>
+                <field name="tamanyo_pet" optional="show"/>
+                <field name="tapa" optional="show"/>
+                <field name="loteado" optional="show"/>
+                <field name="color" optional="show"/>
+                <field name="etiqueta" optional="show"/>
+                <field name="estuche" optional="show"/>
+                <field name="especificaciones_estuche" optional="show"/>
+                <field name="prospecto" optional="show"/>
+                <field name="formato_lote" optional="show"/>
+                <field name="galenica" optional="show"/>
+                <field name="producto_galenica" optional="show"/>
+                <field name="unidad_por_envase" optional="show"/>
+                <field name="lote" optional="show"/>
+                <field name="analisis_especiales" optional="show"/>
+                <field name="especificar_analitica" optional="show"/>
+                <field name="aspecto_visual" optional="show"/>
+                <field name="limitacion_excipientes" optional="show"/>
+
+                <field name="currency_id" attrs="{}" invisible="1"/>
+                <!--    Ingrediente 1   -->
+                <field name="ingred_origen1" optional="show"/>
+                <field name="ingrediente1" optional="show"/>
+                <field name="ingred_mg_unitaria1" optional="show"/>
+                <field name="fuente1" optional="show"/>
+                <field name="vrn1" optional="show"/>
+                <field name="marca1" optional="show"/>
+                <field name="alternativa1" optional="show"/>
+                <field name="ingred_proveedor1" optional="show"/>
+                <field name="ingred_precio1" optional="show"/>
+                <!--    Ingrediente 2   -->
+                <field name="ingred_origen2" optional="show"/>
+                <field name="ingrediente2" optional="show"/>
+                <field name="ingred_mg_unitaria2" optional="show"/>
+                <field name="fuente2" optional="show"/>
+                <field name="vrn2" optional="show"/>
+                <field name="marca2" optional="show"/>
+                <field name="alternativa2" optional="show"/>
+                <field name="ingred_proveedor2" optional="show"/>
+                <field name="ingred_precio2" optional="show"/>
+                <!--    Ingrediente 3   -->
+                <field name="ingred_origen3" optional="show"/>
+                <field name="ingrediente3" optional="show"/>
+                <field name="ingred_mg_unitaria3" optional="show"/>
+                <field name="fuente3" optional="show"/>
+                <field name="vrn3" optional="show"/>
+                <field name="marca3" optional="show"/>
+                <field name="alternativa3" optional="show"/>
+                <field name="ingred_proveedor3" optional="show"/>
+                <field name="ingred_precio3" optional="show"/>
+                <!--    Ingrediente 4   -->
+                <field name="ingred_origen4" optional="show"/>
+                <field name="ingrediente4" optional="show"/>
+                <field name="ingred_mg_unitaria4" optional="show"/>
+                <field name="fuente4" optional="show"/>
+                <field name="vrn4" optional="show"/>
+                <field name="marca4" optional="show"/>
+                <field name="alternativa4" optional="show"/>
+                <field name="ingred_proveedor4" optional="show"/>
+                <field name="ingred_precio4" optional="show"/>
+                <!--    Ingrediente 5   -->
+                <field name="ingred_origen5" optional="show"/>
+                <field name="ingrediente5" optional="show"/>
+                <field name="ingred_mg_unitaria5" optional="show"/>
+                <field name="fuente5" optional="show"/>
+                <field name="vrn5" optional="show"/>
+                <field name="marca5" optional="show"/>
+                <field name="alternativa5" optional="show"/>
+                <field name="ingred_proveedor5" optional="show"/>
+                <field name="ingred_precio5" optional="show"/>
+                <!--    Ingrediente 6   -->
+                <field name="ingred_origen6" optional="show"/>
+                <field name="ingrediente6" optional="show"/>
+                <field name="ingred_mg_unitaria6" optional="show"/>
+                <field name="fuente6" optional="show"/>
+                <field name="vrn6" optional="show"/>
+                <field name="marca6" optional="show"/>
+                <field name="alternativa6" optional="show"/>
+                <field name="ingred_proveedor6" optional="show"/>
+                <field name="ingred_precio6" optional="show"/>
+                <!--    Ingrediente 7   -->
+                <field name="ingred_origen7" optional="show"/>
+                <field name="ingrediente7" optional="show"/>
+                <field name="ingred_mg_unitaria7" optional="show"/>
+                <field name="fuente7" optional="show"/>
+                <field name="vrn7" optional="show"/>
+                <field name="marca7" optional="show"/>
+                <field name="alternativa7" optional="show"/>
+                <field name="ingred_proveedor7" optional="show"/>
+                <field name="ingred_precio7" optional="show"/>
+                <!--    Ingrediente 8   -->
+                <field name="ingred_origen8" optional="show"/>
+                <field name="ingrediente8" optional="show"/>
+                <field name="ingred_mg_unitaria8" optional="show"/>
+                <field name="fuente8" optional="show"/>
+                <field name="vrn8" optional="show"/>
+                <field name="marca8" optional="show"/>
+                <field name="alternativa8" optional="show"/>
+                <field name="ingred_proveedor8" optional="show"/>
+                <field name="ingred_precio8" optional="show"/>
+                <!--    Ingrediente 9   -->
+                <field name="ingred_origen9" optional="show"/>
+                <field name="ingrediente9" optional="show"/>
+                <field name="ingred_mg_unitaria9" optional="show"/>
+                <field name="fuente9" optional="show"/>
+                <field name="vrn9" optional="show"/>
+                <field name="marca9" optional="show"/>
+                <field name="alternativa9" optional="show"/>
+                <field name="ingred_proveedor9" optional="show"/>
+                <field name="ingred_precio9" optional="show"/>
+                <!--    Ingrediente 10   -->
+                <field name="ingred_origen10" optional="show"/>
+                <field name="ingrediente10" optional="show"/>
+                <field name="ingred_mg_unitaria10" optional="show"/>
+                <field name="fuente10" optional="show"/>
+                <field name="vrn10" optional="show"/>
+                <field name="marca10" optional="show"/>
+                <field name="alternativa10" optional="show"/>
+                <field name="ingred_proveedor10" optional="show"/>
+                <field name="ingred_precio10" optional="show"/>
+                <!--    Ingrediente 11   -->
+                <field name="ingred_origen11" optional="show"/>
+                <field name="ingrediente11" optional="show"/>
+                <field name="ingred_mg_unitaria11" optional="show"/>
+                <field name="fuente11" optional="show"/>
+                <field name="vrn11" optional="show"/>
+                <field name="marca11" optional="show"/>
+                <field name="alternativa11" optional="show"/>
+                <field name="ingred_proveedor11" optional="show"/>
+                <field name="ingred_precio11" optional="show"/>
+                <!--    Ingrediente 12   -->
+                <field name="ingred_origen12" optional="show"/>
+                <field name="ingrediente12" optional="show"/>
+                <field name="ingred_mg_unitaria12" optional="show"/>
+                <field name="fuente12" optional="show"/>
+                <field name="vrn12" optional="show"/>
+                <field name="marca12" optional="show"/>
+                <field name="alternativa12" optional="show"/>
+                <field name="ingred_proveedor12" optional="show"/>
+                <field name="ingred_precio12" optional="show"/>
+                <!--    Ingrediente 13   -->
+                <field name="ingred_origen13" optional="show"/>
+                <field name="ingrediente13" optional="show"/>
+                <field name="ingred_mg_unitaria13" optional="show"/>
+                <field name="fuente13" optional="show"/>
+                <field name="vrn13" optional="show"/>
+                <field name="marca13" optional="show"/>
+                <field name="alternativa13" optional="show"/>
+                <field name="ingred_proveedor13" optional="show"/>
+                <field name="ingred_precio13" optional="show"/>
+                <!--    Ingrediente 14   -->
+                <field name="ingred_origen14" optional="show"/>
+                <field name="ingrediente14" optional="show"/>
+                <field name="ingred_mg_unitaria14" optional="show"/>
+                <field name="fuente14" optional="show"/>
+                <field name="vrn14" optional="show"/>
+                <field name="marca14" optional="show"/>
+                <field name="alternativa14" optional="show"/>
+                <field name="ingred_proveedor14" optional="show"/>
+                <field name="ingred_precio14" optional="show"/>
+                <!--    Ingrediente 15   -->
+                <field name="ingred_origen15" optional="show"/>
+                <field name="ingrediente15" optional="show"/>
+                <field name="ingred_mg_unitaria15" optional="show"/>
+                <field name="fuente15" optional="show"/>
+                <field name="vrn15" optional="show"/>
+                <field name="marca15" optional="show"/>
+                <field name="alternativa15" optional="show"/>
+                <field name="ingred_proveedor15" optional="show"/>
+                <field name="ingred_precio15" optional="show"/>
+                <!--    Ingrediente 16   -->
+                <field name="ingred_origen16" optional="show"/>
+                <field name="ingrediente16" optional="show"/>
+                <field name="ingred_mg_unitaria16" optional="show"/>
+                <field name="fuente16" optional="show"/>
+                <field name="vrn16" optional="show"/>
+                <field name="marca16" optional="show"/>
+                <field name="alternativa16" optional="show"/>
+                <field name="ingred_proveedor16" optional="show"/>
+                <field name="ingred_precio16" optional="show"/>
+                <!--    Ingrediente 17   -->
+                <field name="ingred_origen17" optional="show"/>
+                <field name="ingrediente17" optional="show"/>
+                <field name="ingred_mg_unitaria17" optional="show"/>
+                <field name="fuente17" optional="show"/>
+                <field name="vrn17" optional="show"/>
+                <field name="marca17" optional="show"/>
+                <field name="alternativa17" optional="show"/>
+                <field name="ingred_proveedor17" optional="show"/>
+                <field name="ingred_precio17" optional="show"/>
+                <!--    Ingrediente 18   -->
+                <field name="ingred_origen18" optional="show"/>
+                <field name="ingrediente18" optional="show"/>
+                <field name="ingred_mg_unitaria18" optional="show"/>
+                <field name="fuente18" optional="show"/>
+                <field name="vrn18" optional="show"/>
+                <field name="marca18" optional="show"/>
+                <field name="alternativa18" optional="show"/>
+                <field name="ingred_proveedor18" optional="show"/>
+                <field name="ingred_precio18" optional="show"/>
+                <!--    Ingrediente 19   -->
+                <field name="ingred_origen19" optional="show"/>
+                <field name="ingrediente19" optional="show"/>
+                <field name="ingred_mg_unitaria19" optional="show"/>
+                <field name="fuente19" optional="show"/>
+                <field name="vrn19" optional="show"/>
+                <field name="marca19" optional="show"/>
+                <field name="alternativa19" optional="show"/>
+                <field name="ingred_proveedor19" optional="show"/>
+                <field name="ingred_precio19" optional="show"/>
+                <!--    Ingrediente 20   -->
+                <field name="ingred_origen20" optional="show"/>
+                <field name="ingrediente20" optional="show"/>
+                <field name="ingred_mg_unitaria20" optional="show"/>
+                <field name="fuente20" optional="show"/>
+                <field name="vrn20" optional="show"/>
+                <field name="marca20" optional="show"/>
+                <field name="alternativa20" optional="show"/>
+                <field name="ingred_proveedor20" optional="show"/>
+                <field name="ingred_precio20" optional="show"/>
+                <!--    Ingrediente 21   -->
+                <field name="ingred_origen21" optional="show"/>
+                <field name="ingrediente21" optional="show"/>
+                <field name="ingred_mg_unitaria21" optional="show"/>
+                <field name="fuente21" optional="show"/>
+                <field name="vrn21" optional="show"/>
+                <field name="marca21" optional="show"/>
+                <field name="alternativa21" optional="show"/>
+                <field name="ingred_proveedor21" optional="show"/>
+                <field name="ingred_precio21" optional="show"/>
+                <!--    Ingrediente 22   -->
+                <field name="ingred_origen22" optional="show"/>
+                <field name="ingrediente22" optional="show"/>
+                <field name="ingred_mg_unitaria22" optional="show"/>
+                <field name="fuente22" optional="show"/>
+                <field name="vrn22" optional="show"/>
+                <field name="marca22" optional="show"/>
+                <field name="alternativa22" optional="show"/>
+                <field name="ingred_proveedor22" optional="show"/>
+                <field name="ingred_precio22" optional="show"/>
+                <!--    Ingrediente 23   -->
+                <field name="ingred_origen23" optional="show"/>
+                <field name="ingrediente23" optional="show"/>
+                <field name="ingred_mg_unitaria23" optional="show"/>
+                <field name="fuente23" optional="show"/>
+                <field name="vrn23" optional="show"/>
+                <field name="marca23" optional="show"/>
+                <field name="alternativa23" optional="show"/>
+                <field name="ingred_proveedor23" optional="show"/>
+                <field name="ingred_precio23" optional="show"/>
+                <!--    Ingrediente 24   -->
+                <field name="ingred_origen24" optional="show"/>
+                <field name="ingrediente24" optional="show"/>
+                <field name="ingred_mg_unitaria24" optional="show"/>
+                <field name="fuente24" optional="show"/>
+                <field name="vrn24" optional="show"/>
+                <field name="marca24" optional="show"/>
+                <field name="alternativa24" optional="show"/>
+                <field name="ingred_proveedor24" optional="show"/>
+                <field name="ingred_precio24" optional="show"/>
+                <!--    Ingrediente 25   -->
+                <field name="ingred_origen25" optional="show"/>
+                <field name="ingrediente25" optional="show"/>
+                <field name="ingred_mg_unitaria25" optional="show"/>
+                <field name="fuente25" optional="show"/>
+                <field name="vrn25" optional="show"/>
+                <field name="marca25" optional="show"/>
+                <field name="alternativa25" optional="show"/>
+                <field name="ingred_proveedor25" optional="show"/>
+                <field name="ingred_precio25" optional="show"/>
+                <!--    Ingrediente 26   -->
+                <field name="ingred_origen26" optional="show"/>
+                <field name="ingrediente26" optional="show"/>
+                <field name="ingred_mg_unitaria26" optional="show"/>
+                <field name="fuente26" optional="show"/>
+                <field name="vrn26" optional="show"/>
+                <field name="marca26" optional="show"/>
+                <field name="alternativa26" optional="show"/>
+                <field name="ingred_proveedor26" optional="show"/>
+                <field name="ingred_precio26" optional="show"/>
+                <!--    Ingrediente 27   -->
+                <field name="ingred_origen27" optional="show"/>
+                <field name="ingrediente27" optional="show"/>
+                <field name="ingred_mg_unitaria27" optional="show"/>
+                <field name="fuente27" optional="show"/>
+                <field name="vrn27" optional="show"/>
+                <field name="marca27" optional="show"/>
+                <field name="alternativa27" optional="show"/>
+                <field name="ingred_proveedor27" optional="show"/>
+                <field name="ingred_precio27" optional="show"/>
+                <!--    Ingrediente 28   -->
+                <field name="ingred_origen28" optional="show"/>
+                <field name="ingrediente28" optional="show"/>
+                <field name="ingred_mg_unitaria28" optional="show"/>
+                <field name="fuente28" optional="show"/>
+                <field name="vrn28" optional="show"/>
+                <field name="marca28" optional="show"/>
+                <field name="alternativa28" optional="show"/>
+                <field name="ingred_proveedor28" optional="show"/>
+                <field name="ingred_precio28" optional="show"/>
+                <!--    Ingrediente 29   -->
+                <field name="ingred_origen29" optional="show"/>
+                <field name="ingrediente29" optional="show"/>
+                <field name="ingred_mg_unitaria29" optional="show"/>
+                <field name="fuente29" optional="show"/>
+                <field name="vrn29" optional="show"/>
+                <field name="marca29" optional="show"/>
+                <field name="alternativa29" optional="show"/>
+                <field name="ingred_proveedor29" optional="show"/>
+                <field name="ingred_precio29" optional="show"/>
+                <!--    Ingrediente 30   -->
+                <field name="ingred_origen30" optional="show"/>
+                <field name="ingrediente30" optional="show"/>
+                <field name="ingred_mg_unitaria30" optional="show"/>
+                <field name="fuente30" optional="show"/>
+                <field name="vrn30" optional="show"/>
+                <field name="marca30" optional="show"/>
+                <field name="alternativa30" optional="show"/>
+                <field name="ingred_proveedor30" optional="show"/>
+                <field name="ingred_precio30" optional="show"/>
+                <!--    Ingrediente 31   -->
+                <field name="ingred_origen31" optional="show"/>
+                <field name="ingrediente31" optional="show"/>
+                <field name="ingred_mg_unitaria31" optional="show"/>
+                <field name="fuente31" optional="show"/>
+                <field name="vrn31" optional="show"/>
+                <field name="marca31" optional="show"/>
+                <field name="alternativa31" optional="show"/>
+                <field name="ingred_proveedor31" optional="show"/>
+                <field name="ingred_precio31" optional="show"/>
+                <!--    Ingrediente 32   -->
+                <field name="ingred_origen32" optional="show"/>
+                <field name="ingrediente32" optional="show"/>
+                <field name="ingred_mg_unitaria32" optional="show"/>
+                <field name="fuente32" optional="show"/>
+                <field name="vrn32" optional="show"/>
+                <field name="marca32" optional="show"/>
+                <field name="alternativa32" optional="show"/>
+                <field name="ingred_proveedor32" optional="show"/>
+                <field name="ingred_precio32" optional="show"/>
+                <!--    Ingrediente 33   -->
+                <field name="ingred_origen33" optional="show"/>
+                <field name="ingrediente33" optional="show"/>
+                <field name="ingred_mg_unitaria33" optional="show"/>
+                <field name="fuente33" optional="show"/>
+                <field name="vrn33" optional="show"/>
+                <field name="marca33" optional="show"/>
+                <field name="alternativa33" optional="show"/>
+                <field name="ingred_proveedor33" optional="show"/>
+                <field name="ingred_precio33" optional="show"/>
+                <!--    Ingrediente 34   -->
+                <field name="ingred_origen34" optional="show"/>
+                <field name="ingrediente34" optional="show"/>
+                <field name="ingred_mg_unitaria34" optional="show"/>
+                <field name="fuente34" optional="show"/>
+                <field name="vrn34" optional="show"/>
+                <field name="marca34" optional="show"/>
+                <field name="alternativa34" optional="show"/>
+                <field name="ingred_proveedor34" optional="show"/>
+                <field name="ingred_precio34" optional="show"/>
+                <!--    Ingrediente 35   -->
+                <field name="ingred_origen35" optional="show"/>
+                <field name="ingrediente35" optional="show"/>
+                <field name="ingred_mg_unitaria35" optional="show"/>
+                <field name="fuente35" optional="show"/>
+                <field name="vrn35" optional="show"/>
+                <field name="marca35" optional="show"/>
+                <field name="alternativa35" optional="show"/>
+                <field name="ingred_proveedor35" optional="show"/>
+                <field name="ingred_precio35" optional="show"/>
+                <!--    Ingrediente 36   -->
+                <field name="ingred_origen36" optional="show"/>
+                <field name="ingrediente36" optional="show"/>
+                <field name="ingred_mg_unitaria36" optional="show"/>
+                <field name="fuente36" optional="show"/>
+                <field name="vrn36" optional="show"/>
+                <field name="marca36" optional="show"/>
+                <field name="alternativa36" optional="show"/>
+                <field name="ingred_proveedor36" optional="show"/>
+                <field name="ingred_precio36" optional="show"/>
+                <!--    Ingrediente 37   -->
+                <field name="ingred_origen37" optional="show"/>
+                <field name="ingrediente37" optional="show"/>
+                <field name="ingred_mg_unitaria37" optional="show"/>
+                <field name="fuente37" optional="show"/>
+                <field name="vrn37" optional="show"/>
+                <field name="marca37" optional="show"/>
+                <field name="alternativa37" optional="show"/>
+                <field name="ingred_proveedor37" optional="show"/>
+                <field name="ingred_precio37" optional="show"/>
+                <!--    Ingrediente 38   -->
+                <field name="ingred_origen38" optional="show"/>
+                <field name="ingrediente38" optional="show"/>
+                <field name="ingred_mg_unitaria38" optional="show"/>
+                <field name="fuente38" optional="show"/>
+                <field name="vrn38" optional="show"/>
+                <field name="marca38" optional="show"/>
+                <field name="alternativa38" optional="show"/>
+                <field name="ingred_proveedor38" optional="show"/>
+                <field name="ingred_precio38" optional="show"/>
+                <!--    Ingrediente 39   -->
+                <field name="ingred_origen39" optional="show"/>
+                <field name="ingrediente39" optional="show"/>
+                <field name="ingred_mg_unitaria39" optional="show"/>
+                <field name="fuente39" optional="show"/>
+                <field name="vrn39" optional="show"/>
+                <field name="marca39" optional="show"/>
+                <field name="alternativa39" optional="show"/>
+                <field name="ingred_proveedor39" optional="show"/>
+                <field name="ingred_precio39" optional="show"/>
+                <!--    Ingrediente 40   -->
+                <field name="ingred_origen40" optional="show"/>
+                <field name="ingrediente40" optional="show"/>
+                <field name="ingred_mg_unitaria40" optional="show"/>
+                <field name="fuente40" optional="show"/>
+                <field name="vrn40" optional="show"/>
+                <field name="marca40" optional="show"/>
+                <field name="alternativa40" optional="show"/>
+                <field name="ingred_proveedor40" optional="show"/>
+                <field name="ingred_precio40" optional="show"/>
+                <!--    Ingrediente 41   -->
+                <field name="ingred_origen41" optional="show"/>
+                <field name="ingrediente41" optional="show"/>
+                <field name="ingred_mg_unitaria41" optional="show"/>
+                <field name="fuente41" optional="show"/>
+                <field name="vrn41" optional="show"/>
+                <field name="marca41" optional="show"/>
+                <field name="alternativa41" optional="show"/>
+                <field name="ingred_proveedor41" optional="show"/>
+                <field name="ingred_precio41" optional="show"/>
+                <!--    Ingrediente 42   -->
+                <field name="ingred_origen42" optional="show"/>
+                <field name="ingrediente42" optional="show"/>
+                <field name="ingred_mg_unitaria42" optional="show"/>
+                <field name="fuente42" optional="show"/>
+                <field name="vrn42" optional="show"/>
+                <field name="marca42" optional="show"/>
+                <field name="alternativa42" optional="show"/>
+                <field name="ingred_proveedor42" optional="show"/>
+                <field name="ingred_precio42" optional="show"/>
+                <!--    Ingrediente 43   -->
+                <field name="ingred_origen43" optional="show"/>
+                <field name="ingrediente43" optional="show"/>
+                <field name="ingred_mg_unitaria43" optional="show"/>
+                <field name="fuente43" optional="show"/>
+                <field name="vrn43" optional="show"/>
+                <field name="marca43" optional="show"/>
+                <field name="alternativa43" optional="show"/>
+                <field name="ingred_proveedor43" optional="show"/>
+                <field name="ingred_precio43" optional="show"/>
+                <!--    Ingrediente 44   -->
+                <field name="ingred_origen44" optional="show"/>
+                <field name="ingrediente44" optional="show"/>
+                <field name="ingred_mg_unitaria44" optional="show"/>
+                <field name="fuente44" optional="show"/>
+                <field name="vrn44" optional="show"/>
+                <field name="marca44" optional="show"/>
+                <field name="alternativa44" optional="show"/>
+                <field name="ingred_proveedor44" optional="show"/>
+                <field name="ingred_precio44" optional="show"/>
+                <!--    Ingrediente 45   -->
+                <field name="ingred_origen45" optional="show"/>
+                <field name="ingrediente45" optional="show"/>
+                <field name="ingred_mg_unitaria45" optional="show"/>
+                <field name="fuente45" optional="show"/>
+                <field name="vrn45" optional="show"/>
+                <field name="marca45" optional="show"/>
+                <field name="alternativa45" optional="show"/>
+                <field name="ingred_proveedor45" optional="show"/>
+                <field name="ingred_precio45" optional="show"/>
+                <!--    Ingrediente 46   -->
+                <field name="ingred_origen46" optional="show"/>
+                <field name="ingrediente46" optional="show"/>
+                <field name="ingred_mg_unitaria46" optional="show"/>
+                <field name="fuente46" optional="show"/>
+                <field name="vrn46" optional="show"/>
+                <field name="marca46" optional="show"/>
+                <field name="alternativa46" optional="show"/>
+                <field name="ingred_proveedor46" optional="show"/>
+                <field name="ingred_precio46" optional="show"/>
+                <!--    Ingrediente 47   -->
+                <field name="ingred_origen47" optional="show"/>
+                <field name="ingrediente47" optional="show"/>
+                <field name="ingred_mg_unitaria47" optional="show"/>
+                <field name="fuente47" optional="show"/>
+                <field name="vrn47" optional="show"/>
+                <field name="marca47" optional="show"/>
+                <field name="alternativa47" optional="show"/>
+                <field name="ingred_proveedor47" optional="show"/>
+                <field name="ingred_precio47" optional="show"/>
+                <!--    Ingrediente 48   -->
+                <field name="ingred_origen48" optional="show"/>
+                <field name="ingrediente48" optional="show"/>
+                <field name="ingred_mg_unitaria48" optional="show"/>
+                <field name="fuente48" optional="show"/>
+                <field name="vrn48" optional="show"/>
+                <field name="marca48" optional="show"/>
+                <field name="alternativa48" optional="show"/>
+                <field name="ingred_proveedor48" optional="show"/>
+                <field name="ingred_precio48" optional="show"/>
+                <!--    Ingrediente 49   -->
+                <field name="ingred_origen49" optional="show"/>
+                <field name="ingrediente49" optional="show"/>
+                <field name="ingred_mg_unitaria49" optional="show"/>
+                <field name="fuente49" optional="show"/>
+                <field name="vrn49" optional="show"/>
+                <field name="marca49" optional="show"/>
+                <field name="alternativa49" optional="show"/>
+                <field name="ingred_proveedor49" optional="show"/>
+                <field name="ingred_precio49" optional="show"/>
+                <!--    Ingrediente 50   -->
+                <field name="ingred_origen50" optional="show"/>
+                <field name="ingrediente50" optional="show"/>
+                <field name="ingred_mg_unitaria50" optional="show"/>
+                <field name="fuente50" optional="show"/>
+                <field name="vrn50" optional="show"/>
+                <field name="marca50" optional="show"/>
+                <field name="alternativa50" optional="show"/>
+                <field name="ingred_proveedor50" optional="show"/>
+                <field name="ingred_precio50" optional="show"/>
+
+                <!--    Excipiente 1   -->
+                <field name="excipi_origen1" optional="show"/>
+                <field name="excipiente1" optional="show"/>
+                <field name="excipi_mg_unitaria1" optional="show"/>
+                <field name="excipi_proveedor1" optional="show"/>
+                <field name="excipi_precio1" optional="show"/>
+                <!--    Excipiente 2   -->
+                <field name="excipi_origen2" optional="show"/>
+                <field name="excipiente2" optional="show"/>
+                <field name="excipi_mg_unitaria2" optional="show"/>
+                <field name="excipi_proveedor2" optional="show"/>
+                <field name="excipi_precio2" optional="show"/>
+                <!--    Excipiente 3   -->
+                <field name="excipi_origen3" optional="show"/>
+                <field name="excipiente3" optional="show"/>
+                <field name="excipi_mg_unitaria3" optional="show"/>
+                <field name="excipi_proveedor3" optional="show"/>
+                <field name="excipi_precio3" optional="show"/>
+                <!--    Excipiente 4   -->
+                <field name="excipi_origen4" optional="show"/>
+                <field name="excipiente4" optional="show"/>
+                <field name="excipi_mg_unitaria4" optional="show"/>
+                <field name="excipi_proveedor4" optional="show"/>
+                <field name="excipi_precio4" optional="show"/>
+                <!--    Excipiente 5   -->
+                <field name="excipi_origen5" optional="show"/>
+                <field name="excipiente5" optional="show"/>
+                <field name="excipi_mg_unitaria5" optional="show"/>
+                <field name="excipi_proveedor5" optional="show"/>
+                <field name="excipi_precio5" optional="show"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--    Form  -->
+    <record id="analisis_de_costes_view_form" model="ir.ui.view">
+        <field name="model">analisis_de_costes</field>
+        <field name="arch" type="xml">
+            <form>
+                <header/>
+                <sheet string="analisis">
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" required="1" placeholder="Name..."/>
+                        </h1>
+                    </div>
+                    <group name="grupo1">
+                        <group name="grupo1_left">
+                            <field name="user_id" widget="many2one_avatar_user"/>
+                        </group>
+                        <group name="grupo1_right">
+                            <field name="activo" widget="boolean_toggle"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="notes" placeholder="Escriba sus notas aquí ..." nolabel="0"/>
+                    </group>
+                    <!--
+                    <div class="oe_chatter" name="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="message_ids"/>
+                        <field name="activity_ids"/>
+                    </div>
+                    -->
+                    <notebook name="nbook1">
+                        <page string="Info General" name="pest1">
+                            <group name="pest1">
+                                <group name="pest1_left">
+                                    <field name="cliente"/>
+                                    <field name="nombre_producto"/>
+                                    <field name="fecha"/>
+                                    <field name="aplicacion"/>
+                                    <field name="pais"/>
+                                    <field name="fecha_lanzamiento"/>
+                                    <field name="comentarios"/>
+                                </group>
+                                <group name="pest1_right">
+                                    <field name="producto_existente"/>
+                                    <field name="unidades_pedido"/>
+                                    <field name="unidades_anual"/>
+                                    <field name="precio_target"/>
+                                    <field name="velocidad_encapsulado"/>
+                                    <field name="velocidad_envasado"/>
+                                    <field name="merma_estimada"/>
+                                    <field name="tipo_limpieza"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Packaging Primario" name="pest2">
+                            <group name="pest2">
+                                <field name="packaging_primario"/>
+                            </group>
+                            <notebook name="pprimario">
+                                <page string="Blister" name="blister"
+                                      attrs="{'invisible': [['packaging_primario','!=','blister']]}">
+                                    <group name="blister">
+                                        <field name="tamanyo_blister"/>
+                                        <field name="blister_unidad"/>
+                                        <field name="serigrafia"/>
+                                        <field name="bobina_aluminio"/>
+                                    </group>
+                                </page>
+                                <page string="Pildorero" name="pildorero"
+                                      attrs="{'invisible': [['packaging_primario','!=','pildorero']]}">
+                                    <group name="pildorero">
+                                        <field name="tamanyo_pet"/>
+                                        <field name="tapa"/>
+                                        <field name="loteado"/>
+                                        <field name="color"/>
+                                        <field name="etiqueta"/>
+                                    </group>
+                                </page>
+                            </notebook>
+                        </page>
+                        <page string="Packaging Secundario" name="pest3">
+                            <group name="pest3">
+                                <group name="pest3_left">
+                                    <field name="estuche"/>
+                                    <field name="especificaciones_estuche"/>
+                                    <field name="prospecto"/>
+                                    <field name="formato_lote"/>
+                                </group>
+                                <group name="pest3_right">
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Galénica/Analítica" name="pest4">
+                            <group name="pest4">
+                                <group name="pest4_left">
+                                    <field name="galenica"/>
+                                    <field name="producto_galenica"/>
+                                    <field name="unidad_por_envase"/>
+                                </group>
+                                <group name="pest4_right">
+                                    <field name="lote"/>
+                                    <field name="analisis_especiales"/>
+                                    <field name="especificar_analitica"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Ingredientes" name="pest5">
+                            <group name="pest5">
+                                <field name="ingredientes_ids" nolabel="1">
+                                    <tree editable="bottom">
+                                        <field name="origen"/>
+                                        <field name="ingrediente"/>
+                                        <field name="mg_unitaria"/>
+                                        <field name="fuente"/>
+                                        <field name="vrn"/>
+                                        <field name="marca"/>
+                                        <field name="alternativa"/>
+                                        <field name="proveedor" context="{'an_line_search_product':ingrediente}"/>
+                                        <field name="price"/>
+                                        <field name="analisis_de_costes_id" invisible="1"/>
+                                        <field name="company_id" invisible="1"/>
+                                        <field name="company_currency_id" invisible="1"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                        <page string="Excipientes" name="pest6">
+                            <group name="pest6">
+                                <field name="excipientes_ids" nolabel="1">
+                                    <tree editable="bottom">
+                                        <field name="origen"/>
+                                        <field name="excipiente"/>
+                                        <field name="mg_unitaria"/>
+                                        <field name="proveedor" context="{'an_line_search_product':excipiente}"/>
+                                        <field name="price"/>                                        
+                                        <field name="analisis_de_costes_id" invisible="1"/>
+                                        <field name="company_id" invisible="1"/>
+                                        <field name="company_currency_id" invisible="1"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                        <page string="Otros" name="pest7">
+                            <group name="pest7">
+                                <field name="aspecto_visual"/>
+                                <field name="limitacion_excipientes"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--    Acción  -->
+    <record id="action_analisis_de_costes" model="ir.actions.act_window">
+        <field name="name">Análisis de Costes</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">analisis_de_costes</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Cree un nuevo Análisis de Costes para empezar a trabajar
+            </p>
+        </field>
+    </record>
+
+    <!--    Menú
+    Para Project:
+    parent="project.menu_main_pm"
+    ó
+    parent="documents.menu_root"
+    -->
+    <menuitem id="menu_analisis"
+              name="Análisis de Costes"
+              parent="documents.menu_root"
+              action="action_analisis_de_costes"
+              sequence="99"/>
+</odoo>
