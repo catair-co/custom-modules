@@ -12,9 +12,9 @@
             - acción automatizada 'Análisis activo y responsable' para tener un solo análisis activo y poner por defecto el responsable
             - acción automatizada 'Análisis - cambio precios proveedor' que modifica los precios de los ingredientes y excipientes cuando cambia la tarifa de proveedor
     """,
-    'version': '15.0.0.4',
-    'author': "Jorge Aparici",
-    'website': "http://www.indaws.es",
+    'version': '17.0.0.1',
+    # 'author': "",
+    # 'website': "",
     'category': 'Customization',
     'license': 'OPL-1',
     'depends': ['base', 'sale', 'documents'],
@@ -22,6 +22,6 @@
         'security/ir.model.access.csv',
         'views/analisis_costes.xml',
     ],
-    'icon': 'indaws_custom_purchase_order_dates/static/description/icon_indaws.png',
+    # 'icon': 'indaws_custom_purchase_order_dates/static/description/icon_indaws.png',
     'application': False,
 }

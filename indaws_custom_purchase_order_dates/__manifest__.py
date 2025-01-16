@@ -9,8 +9,8 @@
         Customize purchase order and picking dates
     """,
 
-    "author": "INDAWS",
-    "website": "https://www.indaws.es",
+    "author": "",
+    # "website": "",
     'category': 'Purchase',
     'version': '15.0.1',
     'depends': ['base', 'purchase', 'stock', 'product_expiry'],
@@ -21,7 +21,7 @@
          'views/stock_quant.xml',
          'wizard/expired_movement_wizard.xml',
     ],
-    'icon': 'indaws_custom_purchase_order_dates/static/description/icon_indaws.png',
+    'icon': 'indaws_custom_purchase_order_dates/static/description/icon.png',
     'installable': True,
     'application': True,
     'auto_install': False,
