@@ -1,0 +1,101 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* indaws_custom_purchase_order_dates
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-07 17:39+0000\n"
+"PO-Revision-Date: 2025-01-07 17:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: indaws_custom_purchase_order_dates
+#: model_terms:ir.ui.view,arch_db:indaws_custom_purchase_order_dates.expired_movement_form_view
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: indaws_custom_purchase_order_dates
+#: model_terms:ir.ui.view,arch_db:indaws_custom_purchase_order_dates.expired_movement_form_view
+msgid "Change location"
+msgstr "Cambiar ubicación"
+
+#. module: indaws_custom_purchase_order_dates
+#: model:ir.model.fields,field_description:indaws_custom_purchase_order_dates.field_expired_movement__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: indaws_custom_purchase_order_dates
+#: model:ir.model.fields,field_description:indaws_custom_purchase_order_dates.field_expired_movement__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: indaws_custom_purchase_order_dates
+#: model:ir.model.fields,field_description:indaws_custom_purchase_order_dates.field_expired_movement__display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: indaws_custom_purchase_order_dates
+#: model_terms:ir.ui.view,arch_db:indaws_custom_purchase_order_dates.quant_search_view_inherit_product_expiry
+msgid "Expired"
+msgstr "Caducados"
+
+#. module: indaws_custom_purchase_order_dates
+#: model:ir.model,name:indaws_custom_purchase_order_dates.model_expired_movement
+msgid "Expired movement wizard"
+msgstr "Aistente de movimiento de caducados"
+
+#. module: indaws_custom_purchase_order_dates
+#: model_terms:ir.ui.view,arch_db:indaws_custom_purchase_order_dates.quant_search_view_inherit_product_expiry
+msgid "Expired to transfer"
+msgstr "Caducados a transferir"
+
+#. module: indaws_custom_purchase_order_dates
+#: model:ir.model.fields,field_description:indaws_custom_purchase_order_dates.field_expired_movement__id
+msgid "ID"
+msgstr ""
+
+#. module: indaws_custom_purchase_order_dates
+#: model:ir.model.fields,field_description:indaws_custom_purchase_order_dates.field_expired_movement____last_update
+msgid "Last Modified on"
+msgstr "Ultima modificación por"
+
+#. module: indaws_custom_purchase_order_dates
+#: model:ir.model.fields,field_description:indaws_custom_purchase_order_dates.field_expired_movement__write_uid
+msgid "Last Updated by"
+msgstr "Ultima actualización por"
+
+#. module: indaws_custom_purchase_order_dates
+#: model:ir.model.fields,field_description:indaws_custom_purchase_order_dates.field_expired_movement__write_date
+msgid "Last Updated on"
+msgstr "Ultima actualización el"
+
+#. module: indaws_custom_purchase_order_dates
+#: model:ir.model.fields,field_description:indaws_custom_purchase_order_dates.field_expired_movement__new_location
+msgid "New Location"
+msgstr "Nueva localización"
+
+#. module: indaws_custom_purchase_order_dates
+#: model:ir.model,name:indaws_custom_purchase_order_dates.model_purchase_order
+msgid "Purchase Order"
+msgstr "Pedido de compra"
+
+#. module: indaws_custom_purchase_order_dates
+#: model:ir.model,name:indaws_custom_purchase_order_dates.model_purchase_order_line
+msgid "Purchase Order Line"
+msgstr "Línea de pedido de compra"
+
+#. module: indaws_custom_purchase_order_dates
+#: model:ir.model.fields,field_description:indaws_custom_purchase_order_dates.field_expired_movement__stock_quant_ids
+msgid "Stock"
+msgstr ""
+
+#. module: indaws_custom_purchase_order_dates
+#: model:ir.actions.act_window,name:indaws_custom_purchase_order_dates.action_expired_movement_wizard
+msgid "Transferencia caducados 2"
+msgstr "Transferencia de caducados"

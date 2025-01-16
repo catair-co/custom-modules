@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="expired_movement_form_view" model="ir.ui.view">
+        <field name="name">expired.movement.view.form</field>
+        <field name="model">expired.movement</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="new_location"/>
+                    <field name="stock_quant_ids"/>
+                </group>
+                <footer>
+                    <button name="action_change_expired_elements" id="change_location" string="Change location" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_expired_movement_wizard" model="ir.actions.act_window">
+        <field name="name">Transferencia caducados 2</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">expired.movement</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="stock.model_stock_quant" />
+        <field name="binding_view_types">list,form</field>
+    </record>
+
+</odoo>

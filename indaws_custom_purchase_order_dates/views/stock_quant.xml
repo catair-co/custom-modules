@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_stock_quant_tree_editable_expiry" model="ir.ui.view">
+            <field name="name">stock.quant.inherit.form</field>
+            <field name="model">stock.quant</field>
+            <field name="inherit_id" ref="product_expiry.view_stock_quant_tree_editable_expiry" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='use_expiration_date']" position="attributes">
+                    <attribute name="invisible">False</attribute>
+                </xpath>
+                <xpath expr="//field[@name='removal_date']" position="after">
+                    <field name="use_expiration_date" position="move" />
+                </xpath>
+            </field>
+        </record>
+
+        <record id="quant_search_view_inherit_product_expiry" model="ir.ui.view">
+            <field name="name">stock.quant.search.inherit</field>
+            <field name="model">stock.quant</field>
+            <field name="inherit_id" ref="product_expiry.quant_search_view_inherit_product_expiry" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='location_id']" position="after">
+                    <filter name="expired_to_transfer" string="Expired to transfer"
+                            domain="[('removal_date', '&lt;=', context_today().strftime('%Y-%m-%d')),('use_expiration_date','!=',False),('location_id.name','!=', 'My Company: Scrap')]" />
+                    <filter name="expired" string="Expired"
+                            domain="[('removal_date', '&lt;=', context_today().strftime('%Y-%m-%d')),('use_expiration_date','!=',False)]" />
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

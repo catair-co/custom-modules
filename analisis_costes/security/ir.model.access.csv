@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access.analisis.costes,access_analisis_costes,analisis_costes.model_analisis_de_costes,,1,1,1,1
+access.analisis.costes.ingredientes,access_analisis_costes_ingredientes,analisis_costes.model_analisis_de_costes_ingredientes,,1,1,1,1
+access.analisis.costes.excipientes,access_analisis_costes_excipientes,analisis_costes.model_analisis_de_costes_excipientes,,1,1,1,1
