@@ -1,0 +1,18 @@
+
+<odoo>
+    <record id="view_supplement_quotation_form" model="ir.ui.view">
+        <field name="name">supplement.quotation.form</field>
+        <field name="model">supplement.quotation</field>
+        <field name="arch" type="xml">
+            <form string="Cotización de Suplementos Alimenticios">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="customer_id"/>
+                        <field name="capsule_qty"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
