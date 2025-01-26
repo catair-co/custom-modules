@@ -1,0 +1,66 @@
+<odoo>
+    <record id="view_formulation_template_tree" model="ir.ui.view">
+        <field name="name">formulation.template.tree</field>
+        <field name="model">formulation.template</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+     <!-- Acción para mostrar los pedidos relacionados -->
+    <record id="action_sale_order_tree" model="ir.actions.act_window">
+        <field name="name">Pedidos Relacionados</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[('formulation_template_id', '=', context.get('default_formulation_template_id'))]</field>
+    </record>
+
+    <record id="view_formulation_template_form" model="ir.ui.view">
+        <field name="name">formulation.template.form</field>
+        <field name="model">formulation.template</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="customer_id"/>
+                    </group>
+                    <notebook>
+                        <page string="Ingredientes">
+                            <field name="line_ids">
+                                <tree editable="bottom">
+                                    <field name="product_id"/>
+                                    <field name="quantity_per_capsule"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Pedidos Relacionados">
+                            <field name="sale_order_ids" context="{'default_formulation_template_id': id}">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="partner_id"/>
+                                    <field name="date_order"/>
+                                    <field name="state"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <footer>
+                    <button name="%(action_sale_order_tree)s" type="action" string="Ver Pedidos Relacionados" class="btn-primary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="formulation_template_action" model="ir.actions.act_window">
+        <field name="name">Plantillas de Formulación</field>
+        <field name="res_model">formulation.template</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_formulation" name="Formulación" sequence="10"/>
+    <menuitem id="menu_formulation_template" name="Plantillas" parent="menu_formulation" action="formulation_template_action" sequence="20"/>
+</odoo>
