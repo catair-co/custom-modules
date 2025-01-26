@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_formulation_template,access_formulation_template,model_formulation_template,base.group_user,1,1,1,1
+access_formulation_template_line,access_formulation_template_line,model_formulation_template_line,base.group_user,1,1,1,1
+access_cotizador_user,cotizador user,model_cotizador,base.group_user,1,1,1,1
+access_cotizador_line_user,cotizador.line user,model_cotizador_line,base.group_user,1,1,1,1

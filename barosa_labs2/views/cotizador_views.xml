@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_cotizador_form" model="ir.ui.view">
+        <field name="name">cotizador.form</field>
+        <field name="model">cotizador</field>
+        <field name="arch" type="xml">
+            <form string="Cotizador">
+                <sheet>
+                    <group>
+                        <field name="name" string="Nombre del Cotizador" required="1"/>
+                        <field name="formulation_template_id" string="Plantilla de Formulación"/>
+                        <field name="number_of_bottles" string="Número de Botes"/>
+                        <field name="capsules_per_bottle" string="Cápsulas por Bote"/>
+                    </group>
+                    <notebook>
+                        <page string="Líneas del Cotizador">
+                            <field name="line_ids">
+                                <tree editable="bottom">
+                                    <field name="product_id" string="Producto" required="1"/>
+                                    <field name="quantity" string="Cantidad" required="1"/>
+                                    <field name="price_unit" string="Precio Unitario" readonly="1"/>
+                                    <field name="subtotal" string="Subtotal" readonly="1"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="view_cotizador_tree" model="ir.ui.view">
+        <field name="name">cotizador.tree</field>
+        <field name="model">cotizador</field>
+        <field name="arch" type="xml">
+            <tree string="Cotizador">
+                <field name="name" string="Nombre de la Cotización"/>
+                <field name="formulation_template_id" string="Plantilla de Formulación"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vistas del Cotizador -->
+    <!-- ... (las vistas definidas anteriormente) ... -->
+
+    <!-- Acción para el modelo Cotizador -->
+
+    <record id="action_cotizador" model="ir.actions.act_window">
+        <field name="name">Cotizador</field>
+        <field name="res_model">cotizador</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menú para el Cotizador -->
+    <menuitem id="menu_cotizador_root" name="Cotizador" sequence="10" groups="base.group_user"/>
+
+    <menuitem id="menu_cotizador" name="Gestión de Cotizaciones" parent="menu_cotizador_root" action="action_cotizador" sequence="10"/>
+</odoo>
