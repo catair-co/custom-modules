@@ -1,0 +1,7 @@
+<odoo>
+    <data>
+        <record id="your_custom_product_id" model="product.product">
+            <field name="name">Producto Genérico</field>
+        </record>
+    </data>
+</odoo>

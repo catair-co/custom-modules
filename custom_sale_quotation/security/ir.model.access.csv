@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_formulation_template,access.formulation.template,model_formulation_template,base.group_user,1,1,1,1
+access_formulation_template_line,access.formulation.template.line,model_formulation_template_line,base.group_user,1,1,1,1
+access_sale_order_envasado,access.sale.order.envasado,model_sale_order_envasado,,1,1,1,1
+access_sale_order_ingredientes,sale.order.ingredientes,model_sale_order_ingredientes,base.group_user,1,1,1,1
+access_sale_order_envase_line,access.sale.order.envase.line,model_sale_order_envase_line,base.group_user,1,1,1,1
+access_confirm_product_wizard,access.confirm.product.wizard,model_confirm_product_creation_wizard,base.group_user,1,1,1,0
+custom_sale_quotation.access_confirm_product_creation_wizard,access_confirm_product_creation_wizard,model_confirm_product_creation_wizard,base.group_user,1,0,0,0

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_sale_order_form_inherit_custom" model="ir.ui.view">
+        <field name="name">sale.order.form.custom</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            
+            <xpath expr="//notebook" position="inside">  
+
+                <!-- PESTAÑA FORMULACIÓN -->
+                <page string="Formulación">
+                    <group>
+                        <field name="formulacion_template_id" string="Elige una Formulación"/>
+                        <!-- <div class="o_form_label">
+                            <span class="o_form_label_text">Número de Cápsulas</span>
+                            <span class="o_form_label_icon o_stat_text">
+                                <span class="o_stat_text">💊</span>
+                            </span>
+                        </div> -->
+                        <field name="num_capsulas_por_bote" string="Nº Capsulas/Bote"/>
+                        <field name="num_botes" string="Nº Botes"/>
+                        <field name="total_capsulas" string="Cápsulas totales" readonly="1"/>
+                        
+                        <!-- <div class="o_form_label">
+                            <span class="o_form_label_text">Número de Cápsulas</span>
+                            <span class="o_form_label_icon">
+                                <i class="fa fa-pills" title="Número de Cápsulas"></i>
+                            </span>
+                        </div>
+                        <field name="num_capsulas_por_bote"/>
+                        <div class="o_form_label">
+                            <span class="o_form_label_text">Número de Cápsulas</span>
+                            <span class="o_form_label_icon">
+                                <i class="fa fa-prescription-bottle" title="Número de Cápsulas"></i>
+                            </span>
+                        </div>
+                        <field name="num_botes"/>                   -->
+                    </group>
+                     
+             
+                    <!-- PESTAÑA LÍNEAS DE INGREDIENTES -->
+                    <group string="Ingredientes de la Formulación">
+                        <field name="ingredientes_ids">
+                            <tree editable="bottom">
+                                <field name="product_id" string="Producto" required="1"/>
+                                <field name="quantity_per_capsule" string="mg./pill" required="1"/>
+                                <!-- <field name="quantity" string="Total (g)" required="1"/> -->
+                                <field name="quantity_kg" string="Total (kg)"/>
+                                <field name="price_unit" string="PVP / UD." readonly="1"/>
+                                <field name="subtotal" string="PVP" readonly="1"/>
+                            </tree>
+                        </field>
+                    </group>
+                    <group>
+                        <field name="nombre_nueva_formulacion" placeholder="Ingrese el nombre si hay cambios en los ingredientes"/>
+                    </group>
+                </page>
+                <!-- PESTAÑA ENVASADO -->
+                <page string="Envasado">
+
+
+                    <group string="Datos de Envase">
+                        <!-- Selección de Tipo de Envase -->
+                        <field name="categoria_envase_id" placeholder="Seleccione el tipo de envase"/>
+
+                        <!-- Lista Dinámica de Productos de Envasado -->
+                        <field name="envase_dynamic_lines">
+                            <tree editable="bottom">
+                                <field name="categoria_id"/>  <!-- ✅ Se añade aquí -->
+                                <field name="name" readonly="1"/>
+                                <field name="product_id"/>
+                            </tree>
+                        </field>
+                    </group>
+
+                    <!-- <group string="Componentes de Envasado">
+                        <field name="envasado_ids" widget="one2many_list"/>
+                    </group> -->
+                </page>
+
+                <!-- PESTAÑA CÁLCULO DE COSTOS -->
+                <page string="Cálculo de Costos">
+                    <group>
+                        <field name="costo_horas_fabricacion"/>
+                        <field name="costo_mezclado"/>
+                        <field name="costo_transporte"/>
+                        <field name="costo_impresion"/>
+                        <field name="margen_ganancia"/>
+                        <field name="precio_final"/>
+                    </group>
+                     <group>
+                        <field name="costo_por_bote" widget="monetary"/>
+                        <field name="precio_venta_por_bote" widget="monetary"/>
+                    </group>
+                </page>
+
+                <!-- PESTAÑA ACCIONES -->
+                <page string="Acciones">
+                    <group>
+                        <button name="action_recalculate_costs" string="Recalcular Costos" type="object" class="btn-primary"/>
+                        <button name="action_confirm_create_product" string="Crear Producto" type="object" class="btn-success"/>
+                    </group>
+                </page>
+
+            </xpath>
+        </field>
+    </record>
+</odoo>

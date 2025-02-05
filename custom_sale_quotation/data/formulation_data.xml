@@ -1,0 +1,26 @@
+<odoo>
+    <!-- Crear el Producto Vitamina A como product.template -->
+    <record id="product_vitamin_a_template" model="product.template">
+        <field name="name">Vitamina A</field>
+        <field name="type">product</field>  <!-- Producto almacenable -->
+        <field name="categ_id" ref="product.product_category_all"/>  <!-- Categoría asignada -->
+    </record>
+
+    <!-- Crear el Producto `product.product` vinculado -->
+    <record id="product_vitamin_a" model="product.product">
+        <field name="product_tmpl_id" ref="product_vitamin_a_template"/>
+    </record>
+
+    <!-- Crear la Formulación Referenciando `product.product` -->
+    <record id="formulation_template_vitamin_a" model="formulation.template">
+        <field name="name">Fórmula Vitamina A</field>
+        <field name="product_id" ref="product_vitamin_a"/>  <!-- ✅ Ahora sí es `product.product` -->
+    </record>
+
+    <!-- Línea de la formulación con Vitamina D como ingrediente -->
+    <record id="formulation_template_vitamin_a_line1" model="formulation.template.line">
+        <field name="formulation_id" ref="formulation_template_vitamin_a"/>
+        <field name="product_id" ref="product_vitamin_d"/>
+        <field name="quantity_per_capsule">10</field>
+    </record>
+</odoo>

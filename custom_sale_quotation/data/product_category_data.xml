@@ -1,0 +1,38 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Categoría raíz: Envases -->
+        <record id="product_category_envases" model="product.category">
+            <field name="name">Envases</field>
+            <field name="parent_id" ref="product.product_category_1"/>
+        </record>
+
+        <!-- Subcategoría: Botes -->
+        <record id="product_category_botes" model="product.category">
+            <field name="name">Botes</field>
+            <field name="parent_id" ref="product_category_envases"/>
+        </record>
+
+        <!-- Subcategorías de Botes -->
+        <record id="product_category_pildorero" model="product.category">
+            <field name="name">Pildorero</field>
+            <field name="parent_id" ref="product_category_botes"/>
+        </record>
+
+        <record id="product_category_tapas" model="product.category">
+            <field name="name">Tapas</field>
+            <field name="parent_id" ref="product_category_botes"/>
+        </record>
+
+        <!-- Subcategoría: Blíster -->
+        <record id="product_category_blister" model="product.category">
+            <field name="name">Blíster</field>
+            <field name="parent_id" ref="product_category_envases"/>
+        </record>
+
+        <!-- Subcategoría: Sobres -->
+        <record id="product_category_sobres" model="product.category">
+            <field name="name">Sobres</field>
+            <field name="parent_id" ref="product_category_envases"/>
+        </record>
+    </data>
+</odoo>
